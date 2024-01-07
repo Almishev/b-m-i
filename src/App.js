@@ -21,7 +21,7 @@ function App() {
     //prevent submitting
     event.preventDefault()
 
-    if (weight === 0 || height === 0) {
+    if (weight === 0 || weight > 200 || height === 0 || height >2.3 || height < 0) {
       alert('Моля, въведете валидно тегло и височина')
     } else {
       let bmi = weight / (height * height)
