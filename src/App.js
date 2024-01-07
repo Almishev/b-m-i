@@ -3,6 +3,8 @@
 import React, {useState} from 'react'
 
 import './index.css'
+import Footer from './Footer'
+import Head from './Head'
 
 function App() {
 
@@ -20,7 +22,7 @@ function App() {
     event.preventDefault()
 
     if (weight === 0 || height === 0) {
-      alert('Please enter a valid weight and height')
+      alert('Моля, въведете валидно тегло и височина')
     } else {
       let bmi = weight / (height * height)
       setBmi(bmi.toFixed(1))
@@ -28,14 +30,14 @@ function App() {
       // Logic for message
 
       if (bmi < 19) {
-        setMessage('You are underweight')
+        setMessage('Вие сте с поднормено тегло')
       } else if (bmi >= 19 && bmi < 25) {
-        setMessage('You are a healthy weight')
+        setMessage('Имате здравословно тегло')
       } else if (bmi >=25 && bmi < 30){
-        setMessage('You are overweight')
+        setMessage('Вие сте с наднормено тегло')
       }
       else {
-        setMessage('Obesity')
+        setMessage('Затлъстяване')
       }
     }
   }
@@ -63,27 +65,30 @@ function App() {
   }
 
   return (
+    <>
+    <Head/>
     <div className="app">
       <div className='container'>
-        <h2 className='center'>BMI Calculator</h2>
+        <h2 className='center'>Индекс Телесна Маса</h2>
         <form onSubmit={calcBmi}>
           <div>
-            <label>Weight (lbs)</label>
+            <label>Килограми (кг)</label>
             <input value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <div>
-            <label>Height (in)</label>
+            <label>Височина (метри)</label>
             <input value={height} onChange={(event) => setHeight(event.target.value)} />
           </div>
           <div>
-            <button className='btn' type='submit'>Submit</button>
-            <button className='btn btn-outline' onClick={reload} type='submit'>Reload</button>
+            <button className='btn' type='submit'>Сметни</button>
+            <button className='btn btn-outline' onClick={reload} type='submit'>Ново</button>
           </div>
         </form>
 
         <div className='center'>
-          <h3>Your BMI is: {bmi}</h3>
+          <h3>Вашия Индекс Телесна Маса е: {bmi}</h3>
           <p>{message}</p>
+        
         </div>
 
         <div className='img-container'>
@@ -91,6 +96,8 @@ function App() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
