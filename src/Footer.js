@@ -12,7 +12,11 @@ const footerStyle = {
   backgroundColor: '#333',
   color: '#fff',
   textAlign: 'center',
-  padding: '0.5rem',
+  padding: '0.3rem',
+  position: 'fixed',
+  bottom: ' 0',
+  width: '100%',
+ 
 };
 
 export default Footer;
