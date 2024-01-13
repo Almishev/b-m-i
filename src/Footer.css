@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  }
+  
+  .left-part,
+  .right-part {
+    width: 45%; /* Adjust the width as needed */
+  }
+  
+  /* Optional: Add additional styling for each part */
+  .left-part {
+    text-align: left;
+  }
+  
+  .right-part {
+    text-align: right;
+  }
+
+
+  
