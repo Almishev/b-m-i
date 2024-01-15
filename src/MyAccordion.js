@@ -5,6 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { useEffect } from 'react'
+import Stopwatch from './Stopwatch';
 
 
 
@@ -102,6 +103,7 @@ const MyAccordion = () => {
 
  <h3> Позитивно мислене + Действие = Положителен резултат</h3>
   <h3>Негативно мислене + Бездействие = Отрицателен резултат</h3>
+  <Stopwatch />
     </>
     
   );
