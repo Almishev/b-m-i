@@ -18,6 +18,7 @@ function App() {
     <ResponsiveAppBar/>
     <div className="container">
         <Routes>
+        <Route index element ={<Home/>} />
         <Route path="/Тренировки" element={<MyAccordion />} />
          <Route path="/Индекс телесна маса" element={<Bmi />} />
           <Route path="/Начало" element={<Home />} />
